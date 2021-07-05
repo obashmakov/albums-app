@@ -4,7 +4,7 @@ import '../../styles/MainLayout/footer.scss';
 function Footer(): JSX.Element {
   return (
     <footer className="footer">
-      footer
+      &copy; 2021 - 2022 &quot;Albums App&quot;
     </footer>
   );
 }

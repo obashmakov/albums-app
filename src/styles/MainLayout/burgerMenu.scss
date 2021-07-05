@@ -1,0 +1,49 @@
+@import '../variables.scss';
+
+.burger {
+  position: absolute;
+  right: 10px;
+  display: inline-block;
+  cursor: pointer;
+
+  &__bar1,
+  &__bar2,
+  &__bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: $burger-transition;
+    border-radius: 3px;
+
+    @media (max-width: $mobile-width) {
+      width: 30px;
+      height: 4px;
+      margin: 5px 0;
+    }
+  }
+
+  &__bar1--active {
+    transform: rotate(-45deg) translate(-8px, 6px);
+
+    @media (max-width: $mobile-width) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  }
+
+  &__bar2--active {
+    opacity: 0;
+  }
+
+  &__bar3--active {
+    transform: rotate(45deg) translate(-9px, -8px);
+
+    @media (max-width: $mobile-width) {
+      transform: rotate(45deg) translate(-6px, -8px);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
