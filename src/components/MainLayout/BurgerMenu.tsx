@@ -10,7 +10,6 @@ interface BurgerMenuProps {
 function BurgerMenu({ setIsCLicked, isClicked }: BurgerMenuProps): JSX.Element {
   const handleClick = () => {
     const navigation = document.getElementById('navigation');
-    console.log(navigation);
 
     if (isClicked) {
       navigation?.classList.add('nav--close');
