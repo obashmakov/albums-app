@@ -23,7 +23,6 @@ function BurgerMenu({ setIsCLicked, isClicked }: BurgerMenuProps): JSX.Element {
 
   return (
     <button
-      id="burgerButton"
       type="button"
       className="burger"
       onClick={handleClick}

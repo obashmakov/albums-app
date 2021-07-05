@@ -1,21 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
 import '../../styles/MainLayout/nav.scss';
-
-const routes = [
-  {
-    name: 'home',
-    pathname: '/',
-  },
-  {
-    name: 'about',
-    pathname: '/about',
-  },
-  {
-    name: 'contacts',
-    pathname: '/contacts',
-  },
-];
+import routes from '../../constants/routes';
 
 interface NavigationProps {
   isClicked: boolean;
@@ -34,7 +20,6 @@ function Navigation({ isClicked }: NavigationProps): JSX.Element {
       className={cx({
         nav: true,
         'nav--active': isClicked,
-        'nav--notActive': !isClicked,
       })}
     >
       <ul className={cx({
